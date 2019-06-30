@@ -1,0 +1,36 @@
+@startuml
+
+Counter <|-- Dialog
+Main <|-- Counter
+
+class Counter {
+- TextField v1..v20
+- TextField m5..m16
+- TextField k1..k20
+- TextField cena
+- TextField oplata
+- TextField potreb
+- ComboBox m17..m19
+- ComboBox m1..m4
+- Button ok
+- Button clear
++ actionButtonPressed(ActionEvent actionEvent) : void
+- rez : float
+- cena1 : float
+- c : float
+- initialize() : void
++ handle(ActionEvent event) : void
++ Float ans11, ..., ans19, ans110, ..., ans120
++ Button save
+}
+
+class Main {
++start(Stage primaryStage) : void
++main(String[] args)  : void
+}
+
+class Dialog {
++showInfoDialog(String title, String text) : void
+
+}
+@enduml
